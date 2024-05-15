@@ -1,5 +1,5 @@
-import Image from "next/image";
+import { Layout } from "@/components/layout";
 
-export default function Home() {
-  return <main>game</main>;
+export default function Game() {
+  return <Layout>asdas</Layout>;
 }

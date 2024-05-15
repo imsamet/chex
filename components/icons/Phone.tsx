@@ -1,6 +1,6 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgWhatsapp = (props: SVGProps<SVGSVGElement>) => (
+const SvgPhone = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
@@ -15,4 +15,4 @@ const SvgWhatsapp = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 );
-export default SvgWhatsapp;
+export default SvgPhone;

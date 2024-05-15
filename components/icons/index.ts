@@ -9,4 +9,4 @@ export { default as Refresh } from "./Refresh";
 export { default as Right } from "./Right";
 export { default as Sms } from "./Sms";
 export { default as Trush } from "./Trush";
-export { default as Whatsapp } from "./Whatsapp";
+export { default as Phone } from "./Phone";
