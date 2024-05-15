@@ -1,0 +1,12 @@
+export { default as Check } from "./Check";
+export { default as Cross } from "./Cross";
+export { default as Figma } from "./Figma";
+export { default as Github } from "./Github";
+export { default as Left } from "./Left";
+export { default as Linkedin } from "./Linkedin";
+export { default as Logo } from "./Logo";
+export { default as Refresh } from "./Refresh";
+export { default as Right } from "./Right";
+export { default as Sms } from "./Sms";
+export { default as Trush } from "./Trush";
+export { default as Whatsapp } from "./Whatsapp";
