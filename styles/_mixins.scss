@@ -1,30 +1,40 @@
 // media breakpoints
 $breakpoints: (
-  "xs": 36em,
-  //576px
-  "sm": 47.9375em,
-  //767px
-  "md": 61.9375em,
-  //992px
-  "lg": 75em,
-  //1200px
-  "xl": 87.5em,
-  //1400px
+  "xs": 29.6875rem,
+  "sm": 40rem,
+  "md": 48rem,
+  "lg": 64rem,
+  "xl": 80rem,
+  "xxl": 96rem,
+  "xxxl": 100rem,
 ) !default;
 
-@mixin breakpoint($breakpoint) {
+$colSize: 12 !default;
+
+@mixin mediaMin($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+@mixin mediaMax($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
     @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
       @content;
     }
   }
-} // ornek kullanim: @include breakpoint(sm) {}
-// cikti ==> media screen and (max-width:768px) {...}
-
-// width-height değerini kısaca yazmak için.
-@mixin size($width, $height: $width) {
-  width: $width;
-  height: $height;
 }
-// ornek kullanim: @include size(25px, 20px)
-// cikti ==> width: 25px; height:20px;
+/*
+Örnek Kullanım:
+
+@include mediaMin (xs) {
+	
+}
+cikti ==> media screen and (min-width: 475px) {...}
+
+@include mediaMax (xs) {
+	
+}
+cikti ==> media screen and (max-width: 475px) {...}
+*/
