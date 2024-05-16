@@ -1,27 +1,9 @@
 import { Icons } from "@/components/icons/_model";
 
-interface Router {
-  href: string;
-  label: string;
-}
 interface Social {
   href: string;
   icon: Icons;
 }
-export const router: Router[] = [
-  {
-    href: "/",
-    label: "Home",
-  },
-  {
-    href: "/game",
-    label: "Game",
-  },
-  {
-    href: "/score",
-    label: "Score",
-  },
-];
 export const social: Social[] = [
   {
     icon: "Phone",
