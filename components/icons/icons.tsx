@@ -9,6 +9,24 @@ const Icons: React.FC<IconProps> = ({ name, ...props }) => {
     case "Cross":
       return <Icon.Cross {...props} />;
       break;
+    case "Die1":
+      return <Icon.Die1 {...props} />;
+      break;
+    case "Die2":
+      return <Icon.Die2 {...props} />;
+      break;
+    case "Die3":
+      return <Icon.Die3 {...props} />;
+      break;
+    case "Die4":
+      return <Icon.Die4 {...props} />;
+      break;
+    case "Die5":
+      return <Icon.Die5 {...props} />;
+      break;
+    case "Die6":
+      return <Icon.Die6 {...props} />;
+      break;
     case "En":
       return <Icon.En {...props} />;
       break;

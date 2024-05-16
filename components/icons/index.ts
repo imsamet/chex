@@ -1,5 +1,11 @@
 export { default as Check } from "./Check";
 export { default as Cross } from "./Cross";
+export { default as Die1 } from "./Die1";
+export { default as Die2 } from "./Die2";
+export { default as Die3 } from "./Die3";
+export { default as Die4 } from "./Die4";
+export { default as Die5 } from "./Die5";
+export { default as Die6 } from "./Die6";
 export { default as En } from "./En";
 export { default as Figma } from "./Figma";
 export { default as Github } from "./Github";
