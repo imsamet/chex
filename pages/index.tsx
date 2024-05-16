@@ -1,7 +1,5 @@
-import useTranslation from "next-translate/useTranslation";
+import { Header } from "@/modules/header";
 const Home: React.FC = ({}) => {
-  const { t, lang } = useTranslation("common");
-  console.log(t("common:title"));
-  return <></>;
+  return <Header />;
 };
 export default Home;
