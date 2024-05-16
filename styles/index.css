@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+* {
+  padding: 0;
+  margin: 0;
+}
+:root {
+  scroll-padding: 0;
+}
+.row {
+  @apply grid gap-5;
+}
+.text-border-1 {
+  -webkit-text-stroke: 1px #000;
+}
+.text-border-2 {
+  -webkit-text-stroke: 2px #000;
+}
+.text-border-3 {
+  -webkit-text-stroke: 3px #000;
+}
