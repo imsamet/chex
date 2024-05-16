@@ -1,6 +1,7 @@
 export type Icons =
   | "Check"
   | "Cross"
+  | "En"
   | "Figma"
   | "Github"
   | "Left"
@@ -9,6 +10,7 @@ export type Icons =
   | "Refresh"
   | "Right"
   | "Sms"
+  | "Tr"
   | "Trush"
   | "Phone";
 

@@ -9,6 +9,9 @@ const Icons: React.FC<IconProps> = ({ name, ...props }) => {
     case "Cross":
       return <Icon.Cross {...props} />;
       break;
+    case "En":
+      return <Icon.En {...props} />;
+      break;
     case "Figma":
       return <Icon.Figma {...props} />;
       break;
@@ -32,6 +35,9 @@ const Icons: React.FC<IconProps> = ({ name, ...props }) => {
       break;
     case "Sms":
       return <Icon.Sms {...props} />;
+      break;
+    case "Tr":
+      return <Icon.Tr {...props} />;
       break;
     case "Trush":
       return <Icon.Trush {...props} />;
