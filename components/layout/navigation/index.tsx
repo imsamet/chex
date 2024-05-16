@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import styles from "./style.module.scss";
 import { Logo } from "@/components/icons";
 import { router as links, social } from "@/constants/links";
 import classNames from "classnames";
@@ -9,27 +8,27 @@ import Icons from "@/components/icons/icons";
 export const Navigation: React.FC = ({}) => {
   const pathname = usePathname();
   return (
-    <nav>
-      <div className="container">
-        <div className={styles.container}>
+    <nav className="sticky top-0 bg-white">
+      <div className="container mx-auto">
+        <div className="flex justify-between items-center py-5">
           <Link href="/">
-            <Logo className={styles.logo} />
+            <Logo className="w-24 h-auto" />
           </Link>
-          <div className={styles.linkBox}>
+          <div className="flex gap-8">
             {links.map((i) => (
               <Link
                 key={i.href}
                 href={i.href}
                 className={classNames(
-                  styles.link,
-                  pathname === i.href && styles.active
+                  "text-black text-xl font-semibold",
+                  pathname === i.href && "text-primary stroke-1"
                 )}
               >
                 {i.label}
               </Link>
             ))}
           </div>
-          <div className={styles.socialBox}>
+          <div className="flex justify-center items-center gap-8">
             {social.map((i) => (
               <Link href={i.href} target="_blank">
                 <Icons name={i.icon} width={24} height={24} />
