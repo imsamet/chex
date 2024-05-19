@@ -8,6 +8,10 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx,css}",
   ],
   theme: {
+    container: {
+      padding: "2rem",
+      center: true,
+    },
     colors: {
       black: "#000",
       white: "#fff",
