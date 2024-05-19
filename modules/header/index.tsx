@@ -38,9 +38,9 @@ export const Header: React.FC = ({}) => {
     },
   ];
   return (
-    <header className=" py-24">
-      <div className="container mx-auto">
-        <div className="row grid-cols-2">
+    <header className="py-24">
+      <div className="container">
+        <div className="row grid-cols-1 md:grid-cols-2">
           <div className="flex flex-col gap-10 ">
             <Image src="/header.png" alt="" width={500} height={500} />
             <div className="flex flex-col gap-5">
@@ -55,18 +55,16 @@ export const Header: React.FC = ({}) => {
               <Button label={t("lets-go")} icon="Right" />
             </Link>
           </div>
-          <div>
-            <Card>
-              {list.map((i) => (
-                <div className="grid grid-cols-[auto_1fr] gap-5 items-center p-5">
-                  <Icons name={i.icon} width={74} height={74} />
-                  <p className="text-base font-normal leading-[normal]">
-                    {i.label}
-                  </p>
-                </div>
-              ))}
-            </Card>
-          </div>
+          <Card className="mt-8 md:mt-0">
+            {list.map((i) => (
+              <div className="grid grid-cols-[auto_1fr] gap-5 items-center p-5">
+                <Icons name={i.icon} width={74} height={74} />
+                <p className="text-base font-normal leading-[normal]">
+                  {i.label}
+                </p>
+              </div>
+            ))}
+          </Card>
         </div>
       </div>
     </header>
