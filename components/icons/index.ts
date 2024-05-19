@@ -12,6 +12,7 @@ export { default as Github } from "./Github";
 export { default as Left } from "./Left";
 export { default as Linkedin } from "./Linkedin";
 export { default as Logo } from "./Logo";
+export { default as Menu } from "./Menu";
 export { default as Phone } from "./Phone";
 export { default as Refresh } from "./Refresh";
 export { default as Right } from "./Right";

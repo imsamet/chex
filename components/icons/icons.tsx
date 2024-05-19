@@ -45,6 +45,9 @@ const Icons: React.FC<IconProps> = ({ name, ...props }) => {
     case "Logo":
       return <Icon.Logo {...props} />;
       break;
+    case "Menu":
+      return <Icon.Menu {...props} />;
+      break;
     case "Refresh":
       return <Icon.Refresh {...props} />;
       break;

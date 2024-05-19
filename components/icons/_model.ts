@@ -13,6 +13,7 @@ export type Icons =
   | "Left"
   | "Linkedin"
   | "Logo"
+  | "Menu"
   | "Refresh"
   | "Right"
   | "Sms"
