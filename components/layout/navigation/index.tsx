@@ -7,6 +7,18 @@ import { usePathname } from 'next/navigation';
 import Icons from '@/components/icons/icons';
 import useNavLinks from '@/hooks/useNavLinks';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
+const Locale: React.FC = () => {
+  const router = useRouter();
+  return router.locales?.map(
+    (i, key) =>
+      i !== router.locale && (
+        <Link key={key} className="text-base" href={router.asPath} locale={i}>
+          {i.toLocaleUpperCase()}
+        </Link>
+      ),
+  );
+};
 export const Navigation: React.FC = ({}) => {
   const [isOpen, setOpen] = useState<boolean>(false);
   const pathname = usePathname();
@@ -49,6 +61,7 @@ export const Navigation: React.FC = ({}) => {
                   <Icons name={i.icon} width={24} height={24} />
                 </Link>
               ))}
+              <Locale />
             </div>
           </div>
         </div>

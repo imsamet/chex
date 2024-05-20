@@ -51,7 +51,7 @@ export const Header: React.FC = ({}) => {
               <Button label={t('lets-go')} icon="Right" />
             </Link>
           </div>
-          <Card className="mt-8 md:mt-0">
+          <Card title={t('card-title')} className="mt-8 md:mt-0">
             {list.map(i => (
               <div className="grid grid-cols-[auto_1fr] gap-5 items-center p-5">
                 <Icons name={i.icon} width={74} height={74} />
