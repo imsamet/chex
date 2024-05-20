@@ -1,0 +1,200 @@
+{
+  "en": {
+    "steps": [
+      {
+        "level": 1,
+        "games": [
+          {
+            "id": "en-1-1",
+            "letter-set": ["c", "a", "t"],
+            "words": ["cat", "act"]
+          },
+          {
+            "id": "en-1-2",
+            "letter-set": ["b", "a", "t"],
+            "words": ["bat", "tab"]
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "games": [
+          {
+            "id": "en-2-1",
+            "letter-set": ["d", "o", "g", "s"],
+            "words": ["dog", "god", "dogs"]
+          },
+          {
+            "id": "en-2-2",
+            "letter-set": ["l", "i", "k", "e"],
+            "words": ["like", "lie", "ilk", "lei"]
+          },
+          {
+            "id": "en-2-3",
+            "letter-set": ["p", "a", "r", "k"],
+            "words": ["park", "ark", "par", "rap"]
+          },
+          {
+            "id": "en-2-4",
+            "letter-set": ["f", "a", "c", "e"],
+            "words": ["face", "cafe", "ace"]
+          },
+          {
+            "id": "en-2-4",
+            "letter-set": ["t", "h", "i", "s"],
+            "words": ["this", "his", "hit", "its"]
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "games": [
+          {
+            "id": "en-3-1",
+            "letter-set": ["a", "p", "l", "e", "s"],
+            "words": ["apple", "pal", "lap", "sale", "seal"]
+          },
+          {
+            "id": "en-3-2",
+            "letter-set": ["h", "o", "u", "s", "e"],
+            "words": ["house", "hose", "use", "she"]
+          },
+          {
+            "id": "en-3-3",
+            "letter-set": ["c", "h", "a", "i", "r"],
+            "words": ["chair", "hair", "arch", "rich"]
+          },
+          {
+            "id": "en-3-4",
+            "letter-set": ["t", "a", "b", "l", "e"],
+            "words": ["table", "belt", "bale", "beat"]
+          },
+          {
+            "id": "en-3-5",
+            "letter-set": ["f", "r", "i", "e", "n"],
+            "words": ["friend", "fire", "fine", "find"]
+          },
+          {
+            "id": "en-3-6",
+            "letter-set": ["s", "t", "a", "r", "t"],
+            "words": ["start", "star", "rat", "art"]
+          },
+          {
+            "id": "en-3-7",
+            "letter-set": ["s", "c", "h", "o", "o", "l"],
+            "words": ["school", "cool", "chop", "loch"]
+          },
+          {
+            "id": "en-3-8",
+            "letter-set": ["m", "a", "g", "i", "c"],
+            "words": ["magic", "cam", "aim", "gig"]
+          },
+          {
+            "id": "en-3-9",
+            "letter-set": ["d", "r", "e", "a", "m"],
+            "words": ["dream", "read", "dare", "made"]
+          }
+        ]
+      }
+    ]
+  },
+  "tr": {
+    "steps": [
+      {
+        "level": 1,
+        "games": [
+          {
+            "id": "tr-1-1",
+            "letter-set": ["ç", "m", "a"],
+            "words": ["maç", "çam"]
+          },
+          {
+            "id": "tr-1-2",
+            "letter-set": ["ş", "ı", "k"],
+            "words": ["şık", "kış"]
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "games": [
+          {
+            "id": "tr-2-1",
+            "letter-set": ["k", "ü", "y", "ö"],
+            "words": ["köy", "yük", "öykü"]
+          },
+          {
+            "id": "tr-2-2",
+            "letter-set": ["i", "l", "e", "ç"],
+            "words": ["elçi", "çile", "çil", "ilçe"]
+          },
+          {
+            "id": "tr-2-3",
+            "letter-set": ["a", "d", "m", "a"],
+            "words": ["adam", "dama", "dam", "ama", "ada"]
+          },
+          {
+            "id": "tr-2-4",
+            "letter-set": ["a", "r", "a", "k"],
+            "words": ["kara", "kar", "arka", "ara"]
+          },
+          {
+            "id": "tr-2-5",
+            "letter-set": ["t", "ç", "ı", "a"],
+            "words": ["taç", "çıta", "açı", "çatı"]
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "games": [
+          {
+            "id": "tr-3-1",
+            "letter-set": ["ı", "r", "p", "a", "n"],
+            "words": ["nar", "pınar", "arı", "anı"]
+          },
+          {
+            "id": "tr-3-2",
+            "letter-set": ["h", "a", "t", "a", "f"],
+            "words": ["hata", "hat", "ata", "hafta"]
+          },
+          {
+            "id": "tr-3-3",
+            "letter-set": ["k", "k", "z", "a", "ı"],
+            "words": ["kızak", "kazık", "kazı", "azı", "kız", "kaz"]
+          },
+          {
+            "id": "tr-3-4",
+            "letter-set": ["e", "e", "k", "c", "t"],
+            "words": ["ceket", "etek", "tek", "teke"]
+          },
+          {
+            "id": "tr-3-5",
+            "letter-set": ["n", "e", "a", "h", "s"],
+            "words": ["sahne", "hane", "has", "sen", "han", "san"]
+          },
+          {
+            "id": "tr-3-6",
+            "letter-set": ["u", "o", "n", "t", "k"],
+            "words": ["konut", "konu", "tok", "kot", "not", "ton"]
+          },
+          {
+            "id": "tr-3-7",
+            "letter-set": ["u", "m", "k", "o", "l"],
+            "words": ["lokum", "oluk", "okul", "kum", "kul", "kol"]
+          },
+          {
+            "id": "tr-3-8",
+            "letter-set": ["e", "k", "e", "z", "e"],
+            "words": ["ezmek", "ezme", "meze", "emek", "kez"]
+          },
+          {
+            "id": "tr-3-9",
+            "letter-set": ["i", "ç", "m", "k", "e"],
+            "words": ["çekim", "ekim", "keçi", "kim", "çek", "çim"]
+          }
+        ]
+      }
+    ]
+  }
+}
