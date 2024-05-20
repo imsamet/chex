@@ -10,6 +10,7 @@ import Button from '@/components/button';
 import { Progress } from '@/components/progress';
 import { GamePad } from '@/components/gamePad';
 import { setDeleteWord } from '@/store/reducer/gameSlice';
+import { Modal } from '@/components/modal';
 interface List {
   label: string;
   icon: IconsType;
@@ -26,6 +27,7 @@ export const Game: React.FC = ({}) => {
   };
   return (
     <header className="py-24">
+      <Modal />
       <div className="container">
         <div className="row grid-cols-1 md:grid-cols-2">
           <div className="flex flex-col gap-10">

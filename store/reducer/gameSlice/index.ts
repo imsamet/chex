@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { GameState, SelectLetter } from './_models';
+import { GameState, Score, SelectLetter } from './_models';
 import getGame from '../../actions/game/getGame';
 import getScore from '@/store/actions/game/getScore';
 
@@ -53,22 +53,6 @@ export const gameSlice = createSlice({
     setDeleteWord: (state, action: PayloadAction<string>) => {
       state.words = state.words.filter(i => i.word !== action.payload);
     },
-    setNextStep: state => {
-      if (!state.game) return;
-      const temp = state.game.steps.find(i => i.level === state.level);
-      const index = temp?.games.findIndex(i => i.id === state.letterSetId) || 0;
-      if (temp && index < temp?.games.length - 1) {
-        state.letterSetId = temp.games[index + 1].id;
-        state.selectLetter = [];
-        state.time = 60;
-      }
-      // else if (state.level < 3) {
-      //   state.letterSetId = state.game.steps.find(i => i.level === state.level + 1)?.games[0].id || null;
-      //   state.level += 1;
-      //   state.selectLetter = [];
-      //   state.time = 60;
-      // }
-    },
   },
   extraReducers: builder => {
     builder.addCase(getGame.pending, state => {
@@ -85,10 +69,21 @@ export const gameSlice = createSlice({
     builder.addCase(getScore.pending, state => {
       state.isLoading = true;
     });
-    builder.addCase(getScore.fulfilled, (state, action) => {
+    builder.addCase(getScore.fulfilled, (state, action: PayloadAction<Score>) => {
       state.isLoading = false;
-      //@ts-ignore
       state.scores.push(action.payload);
+      if (!state.game) return;
+      state.selectLetter = [];
+      state.words = [];
+      state.time = 60 + action.payload.addTime;
+      const temp = state.game.steps.find(i => i.level === state.level);
+      const index = temp?.games.findIndex(i => i.id === state.letterSetId) || 0;
+      if (temp && index < temp?.games.length - 1) {
+        state.letterSetId = temp.games[index + 1].id;
+      } else if (state.level < 3) {
+        state.letterSetId = state.game.steps.find(i => i.level === state.level + 1)?.games[0].id || null;
+        state.level += 1;
+      }
     });
     builder.addCase(getScore.rejected, (state, action) => {
       state.isLoading = false;
@@ -96,14 +91,6 @@ export const gameSlice = createSlice({
   },
 });
 
-export const {
-  stopTimer,
-  startTimer,
-  tick,
-  setSelectLetter,
-  setBackwardSelectLetter,
-  setCheck,
-  setDeleteWord,
-  setNextStep,
-} = gameSlice.actions;
+export const { stopTimer, startTimer, tick, setSelectLetter, setBackwardSelectLetter, setCheck, setDeleteWord } =
+  gameSlice.actions;
 export default gameSlice.reducer;

@@ -3,7 +3,7 @@ import cn from 'classnames';
 import Button from '../button';
 import { GameButtonPad } from '../gameButtonPad';
 import { BugsBunny } from '../icons';
-import { setBackwardSelectLetter, setCheck, setNextStep, startTimer, stopTimer, tick } from '@/store/reducer/gameSlice';
+import { setBackwardSelectLetter, setCheck, startTimer, stopTimer, tick } from '@/store/reducer/gameSlice';
 import useTranslation from 'next-translate/useTranslation';
 import { useEffect } from 'react';
 import getScore from '@/store/actions/game/getScore';
@@ -43,9 +43,6 @@ export const GamePad: React.FC = () => {
     //@ts-ignore
     await dispatch(getScore(reqData));
   };
-  const handleClickNextStep = () => {
-    dispatch(setNextStep());
-  };
   const handleStart = () => {
     dispatch(startTimer());
   };
@@ -63,7 +60,7 @@ export const GamePad: React.FC = () => {
           {selectLetter
             .map(i => i.letter)
             .join('')
-            .toLocaleUpperCase()}{' '}
+            .toLocaleUpperCase(lang === 'en' ? 'en-US' : 'tr-TR')}{' '}
         </span>
 
         <Button onClick={handleClickBackward} icon="Backward" circle />
@@ -72,7 +69,6 @@ export const GamePad: React.FC = () => {
         <GameButtonPad />
       </div>
       <div className="flex justify-center gap-2">
-        <Button onClick={handleClickNextStep} label={t('next-step')} icon="Check" />
         <Button onClick={handleClickCheck} label={t('add')} icon="Check" />
         <Button onClick={handleClickComplateStep} label={t('complete-step')} icon="Check" />
       </div>

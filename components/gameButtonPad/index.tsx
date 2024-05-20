@@ -7,7 +7,7 @@ import useTranslation from 'next-translate/useTranslation';
 import Button from '../button';
 
 export const GameButtonPad: React.FC = () => {
-  const { t } = useTranslation('game');
+  const { t, lang } = useTranslation('game');
   const dispatch = useDispatch();
   const { level, selectLetter, letterSetId, game } = useSelector(state => state.game);
   const [charSet, setCharSet] = useState<string[]>([]);
@@ -34,7 +34,7 @@ export const GameButtonPad: React.FC = () => {
           >
             <div className="bg-primary relative">
               <span className="absolute left-0 right-0 top-0 bottom-0 m-auto w-fit h-fit font-bold text-6xl text-border-3 text-white">
-                {charSet?.[0]?.toLocaleUpperCase()}
+                {charSet?.[0]?.toLocaleUpperCase(lang === 'en' ? 'en-US' : 'tr-TR')}
               </span>
             </div>
           </div>
@@ -44,7 +44,7 @@ export const GameButtonPad: React.FC = () => {
           >
             <div className="bg-primary relative">
               <span className="absolute left-0 right-0 top-0 bottom-0 m-auto w-fit h-fit font-bold text-6xl text-border-3 text-white">
-                {charSet?.[1]?.toLocaleUpperCase()}
+                {charSet?.[1]?.toLocaleUpperCase(lang === 'en' ? 'en-US' : 'tr-TR')}
               </span>
             </div>
           </div>
@@ -58,7 +58,7 @@ export const GameButtonPad: React.FC = () => {
           >
             <div className="bg-primary relative">
               <span className="absolute left-0 right-0 top-0 bottom-0 m-auto w-fit h-fit font-bold text-6xl text-border-3 text-white">
-                {charSet?.[2]?.toLocaleUpperCase()}
+                {charSet?.[2]?.toLocaleUpperCase(lang === 'en' ? 'en-US' : 'tr-TR')}
               </span>
             </div>
           </div>
@@ -69,7 +69,7 @@ export const GameButtonPad: React.FC = () => {
             >
               <div className="bg-primary relative">
                 <span className="absolute left-0 right-0 top-0 bottom-0 m-auto w-fit h-fit font-bold text-6xl text-border-3 text-white">
-                  {charSet?.[3]?.toLocaleUpperCase()}
+                  {charSet?.[3]?.toLocaleUpperCase(lang === 'en' ? 'en-US' : 'tr-TR')}
                 </span>
               </div>
             </div>
@@ -85,7 +85,7 @@ export const GameButtonPad: React.FC = () => {
             >
               <div className="bg-primary relative">
                 <span className="absolute left-0 right-0 top-0 bottom-0 m-auto w-fit h-fit font-bold text-6xl text-border-3 text-white">
-                  {charSet?.[3]?.toLocaleUpperCase()}
+                  {charSet?.[3]?.toLocaleUpperCase(lang === 'en' ? 'en-US' : 'tr-TR')}
                 </span>
               </div>
             </div>
@@ -95,7 +95,7 @@ export const GameButtonPad: React.FC = () => {
             >
               <div className="bg-primary relative">
                 <span className="absolute left-0 right-0 top-0 bottom-0 m-auto w-fit h-fit font-bold text-6xl text-border-3 text-white">
-                  {charSet?.[4]?.toLocaleUpperCase()}
+                  {charSet?.[4]?.toLocaleUpperCase(lang === 'en' ? 'en-US' : 'tr-TR')}
                 </span>
               </div>
             </div>

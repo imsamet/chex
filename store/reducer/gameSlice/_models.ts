@@ -5,6 +5,14 @@ export type SelectLetter = {
   index: number;
   letter: string;
 };
+export type Score = {
+  level: Level;
+  stepId: string;
+  score: number;
+  addTime: number;
+  matchWords: string[];
+  notMatchWords: string[];
+};
 export type GameState = {
   level: Level;
   isLoading: boolean;
@@ -18,12 +26,5 @@ export type GameState = {
     letterSetId: string;
     word: string;
   }[];
-  scores: {
-    level: Level;
-    stepId: string;
-    score: number;
-    addTime: number;
-    matchWords: string[];
-    notMatchWords: string[];
-  }[];
+  scores: Score[];
 };
