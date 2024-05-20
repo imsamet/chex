@@ -14,10 +14,6 @@ const useNavLinks = (): Router[] => {
       href: '/game',
       label: t('game'),
     },
-    {
-      href: '/score',
-      label: t('score'),
-    },
   ];
   return router;
 };
