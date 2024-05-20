@@ -3,7 +3,7 @@ import { Level } from '@/db/_model';
 type Game = {
   id: string;
   'letter-set': string[];
-  words: number;
+  wordsLength: number;
 };
 type Step = {
   level: Level;

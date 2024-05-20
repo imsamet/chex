@@ -23,3 +23,6 @@ body,
 .text-border-3 {
   -webkit-text-stroke: 3px #000;
 }
+.shadow {
+  box-shadow: 7px 7px 0 0 #000;
+}

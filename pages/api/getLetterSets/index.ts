@@ -12,7 +12,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           games: i.games.map(g => ({
             id: g.id,
             'letter-set': g['letter-set'],
-            words: g.words.length,
+            wordsLength: g.words.length,
           })),
         })),
       };

@@ -3,6 +3,12 @@ import * as Icon from './index';
 
 const Icons: React.FC<IconProps> = ({ name, ...props }) => {
   switch (name) {
+    case 'Backward':
+      return <Icon.Backward {...props} />;
+      break;
+    case 'BugsBunny':
+      return <Icon.BugsBunny {...props} />;
+      break;
     case 'Check':
       return <Icon.Check {...props} />;
       break;

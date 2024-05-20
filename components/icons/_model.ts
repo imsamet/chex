@@ -1,4 +1,6 @@
 export type Icons =
+  | 'Backward'
+  | 'BugsBunny'
   | 'Check'
   | 'Cross'
   | 'Die1'

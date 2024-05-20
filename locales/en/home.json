@@ -3,7 +3,7 @@
   "description": "Alright, let's get started. Have a glass of water, splash your face, take a deep breath. These are all important for a healthy lifestyle, but they won't give you any advantage in the game. I just thought I'd mention that 😁 Now, let's get going ALREADY!",
   "lets-go": "Let’s Go!",
   "card-title": "What is the WB?",
-  "list-1": "We give you 3 - 5 letters at each step, and it takes a total of 10 minutes.",
+  "list-1": "We give you 3 - 5 letters at each step, and it takes a total of 1 minutes.",
   "list-2": "You're trying to find words with these letters.",
   "list-3": "For each word you find at each step, you earn 5 points and +15 seconds.",
   "list-4": "There has to be a cost to not knowing, too. For every word you can't find, we deduct 1 point. Formula: x^2 + 2x - (-1) = x^2 + 2x + 1 Just kidding, we'll do the calculations 😁",

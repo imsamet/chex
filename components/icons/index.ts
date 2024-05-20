@@ -1,3 +1,5 @@
+export { default as Backward } from './Backward';
+export { default as BugsBunny } from './BugsBunny';
 export { default as Check } from './Check';
 export { default as Cross } from './Cross';
 export { default as Die1 } from './Die1';

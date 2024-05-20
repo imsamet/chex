@@ -8,7 +8,7 @@ type Props = {
 };
 const Card: React.FC<Props> = ({ title, className, children }) => {
   return (
-    <div className={classNames('border border-[3px] rounded-xl bg-primary py-[50px] relative', className)}>
+    <div className={classNames('border border-[3px] rounded-xl bg-primary py-[50px] relative shadow', className)}>
       <div className="absolute border border-[3px] rounded-full bg-white py-[10px] px-5 top-[-30px] mx-auto left-0 right-0 w-[max-content] text-center">
         <span className="text-[32px] font-bold leading-[normal] text-black">{title}</span>
       </div>

@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { getGame as get } from './core/_request';
+import { postCreateGym as get } from './core/_request';
 import { Lang } from '@/core/_model';
 
 const getGame = createAsyncThunk('game/get', async (lang: Lang, { rejectWithValue }) => {
