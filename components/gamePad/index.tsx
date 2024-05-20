@@ -3,20 +3,24 @@ import cn from 'classnames';
 import Button from '../button';
 import { GameButtonPad } from '../gameButtonPad';
 import { BugsBunny } from '../icons';
-import { setBackwardSelectLetter, setCheck, setNextStep, startTimer, tick } from '@/store/reducer/gameSlice';
+import { setBackwardSelectLetter, setCheck, setNextStep, startTimer, stopTimer, tick } from '@/store/reducer/gameSlice';
 import useTranslation from 'next-translate/useTranslation';
 import { useEffect } from 'react';
+import getScore from '@/store/actions/game/getScore';
 
 export const GamePad: React.FC = () => {
-  const { t } = useTranslation('game');
+  const { t, lang } = useTranslation('game');
   const dispatch = useDispatch();
-  const { isRunning, time, selectLetter } = useSelector(state => state.game);
+  const { isRunning, time, selectLetter, level, letterSetId, words } = useSelector(state => state.game);
   useEffect(() => {
     let interval: NodeJS.Timeout;
     if (isRunning && time >= 0) {
       interval = setInterval(() => {
         dispatch(tick());
       }, 1000);
+    }
+    if (time === 0) {
+      dispatch(stopTimer());
     }
     return () => clearInterval(interval);
   }, [isRunning, dispatch]);
@@ -26,7 +30,20 @@ export const GamePad: React.FC = () => {
   const handleClickCheck = () => {
     dispatch(setCheck());
   };
-  const handleClickComplateStep = () => {
+  const handleClickComplateStep = async () => {
+    dispatch(stopTimer());
+    const reqData = {
+      lang,
+      level,
+      step: {
+        id: letterSetId,
+        words: words.map(i => i.word),
+      },
+    };
+    //@ts-ignore
+    await dispatch(getScore(reqData));
+  };
+  const handleClickNextStep = () => {
     dispatch(setNextStep());
   };
   const handleStart = () => {
@@ -55,8 +72,9 @@ export const GamePad: React.FC = () => {
         <GameButtonPad />
       </div>
       <div className="flex justify-center gap-2">
-        <Button onClick={handleClickComplateStep} label={t('complete-step')} icon="Check" />
+        <Button onClick={handleClickNextStep} label={t('next-step')} icon="Check" />
         <Button onClick={handleClickCheck} label={t('add')} icon="Check" />
+        <Button onClick={handleClickComplateStep} label={t('complete-step')} icon="Check" />
       </div>
       <div
         className={cn(

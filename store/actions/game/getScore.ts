@@ -1,14 +1,14 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { postCreateGym as get } from './core/_request';
-import { Lang } from '@/core/_model';
+import { getScore as get } from './core/_request';
+import { Lang, ScoreBody } from '@/core/_model';
 
-const getGame = createAsyncThunk('game/get', async (lang: Lang, { rejectWithValue }) => {
+const getScore = createAsyncThunk('game/score', async (data: ScoreBody, { rejectWithValue }) => {
   try {
-    const response = await get(lang);
+    const response = await get(data);
     return response;
   } catch (e) {
     return rejectWithValue(e);
   }
 });
 
-export default getGame;
+export default getScore;

@@ -14,3 +14,12 @@ export type GetGame = {
 };
 
 export type Lang = 'en' | 'tr';
+
+export type ScoreBody = {
+  lang: Lang;
+  level: Level;
+  step: {
+    id: string;
+    words: string[];
+  };
+};

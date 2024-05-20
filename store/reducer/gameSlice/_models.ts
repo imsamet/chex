@@ -18,4 +18,12 @@ export type GameState = {
     letterSetId: string;
     word: string;
   }[];
+  scores: {
+    level: Level;
+    stepId: string;
+    score: number;
+    addTime: number;
+    matchWords: string[];
+    notMatchWords: string[];
+  }[];
 };

@@ -1,6 +1,7 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { GameState, SelectLetter } from './_models';
 import getGame from '../../actions/game/getGame';
+import getScore from '@/store/actions/game/getScore';
 
 const initialState: GameState = {
   isLoading: false,
@@ -11,6 +12,7 @@ const initialState: GameState = {
   isRunning: false,
   time: 60,
   words: [],
+  scores: [],
 };
 
 export const gameSlice = createSlice({
@@ -59,12 +61,13 @@ export const gameSlice = createSlice({
         state.letterSetId = temp.games[index + 1].id;
         state.selectLetter = [];
         state.time = 60;
-      } else if (state.level < 3) {
-        state.letterSetId = state.game.steps.find(i => i.level === state.level + 1)?.games[0].id || null;
-        state.level += 1;
-        state.selectLetter = [];
-        state.time = 60;
       }
+      // else if (state.level < 3) {
+      //   state.letterSetId = state.game.steps.find(i => i.level === state.level + 1)?.games[0].id || null;
+      //   state.level += 1;
+      //   state.selectLetter = [];
+      //   state.time = 60;
+      // }
     },
   },
   extraReducers: builder => {
@@ -77,6 +80,17 @@ export const gameSlice = createSlice({
       state.letterSetId = action.payload.steps[0].games[0].id;
     });
     builder.addCase(getGame.rejected, (state, action) => {
+      state.isLoading = false;
+    });
+    builder.addCase(getScore.pending, state => {
+      state.isLoading = true;
+    });
+    builder.addCase(getScore.fulfilled, (state, action) => {
+      state.isLoading = false;
+      //@ts-ignore
+      state.scores.push(action.payload);
+    });
+    builder.addCase(getScore.rejected, (state, action) => {
       state.isLoading = false;
     });
   },
