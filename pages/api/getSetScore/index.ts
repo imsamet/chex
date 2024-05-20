@@ -1,8 +1,9 @@
+import { Lang } from '@/core/_model';
 import { getData } from '@/server/getData';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 type BodyType = {
-  lang: 'en' | 'tr';
+  lang: Lang;
   level: 1 | 2 | 3;
   steps: {
     id: string;

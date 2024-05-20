@@ -1,5 +1,5 @@
-import { Header } from '@/modules/header';
+import { Game } from '@/modules/game';
 const Home: React.FC = ({}) => {
-  return <Header />;
+  return <Game />;
 };
 export default Home;

@@ -1,8 +1,9 @@
+import { Lang } from '@/core/_model';
 import { getData } from '@/server/getData';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { lang } = req.query;
+  const { lang } = req.query as { lang: Lang };
   getData(lang)
     .then(game => {
       const resJson = {

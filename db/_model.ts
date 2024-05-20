@@ -1,10 +1,11 @@
+export type Level = 1 | 2 | 3;
 type GameStep = {
   id: string;
   'letter-set': string[];
   words: string[];
 };
 type Step = {
-  level: 1 | 2 | 3;
+  level: Level;
   games: GameStep[];
 };
 export type Game = {
