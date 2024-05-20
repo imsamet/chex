@@ -17,15 +17,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   getData(lang)
     .then(game => {
       let matchWords: string[] = [];
+      let notMatchWords: string[] = [];
       game.steps
         .find(i => i.level === level)
         ?.games.map(i => {
           const step = steps.find(s => s.id === i.id);
           matchWords = [...matchWords, ...i.words.filter(w => step?.words.some(s => s === w))];
+          notMatchWords = [...notMatchWords, ...i.words.filter(w => !step?.words.some(s => s === w))];
         });
       const resJson = {
         score: matchWords.length * 5,
         addTime: matchWords.length * 15,
+        matchWords,
+        notMatchWords,
       };
       res.status(200).json(resJson);
     })
