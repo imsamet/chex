@@ -1,14 +1,7 @@
-import * as React from "react";
-import type { SVGProps } from "react";
+import * as React from 'react';
+import type { SVGProps } from 'react';
 const SvgLogo = (props: SVGProps<SVGSVGElement>) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="1em"
-    height="1em"
-    fill="none"
-    viewBox="0 0 1567 1374"
-    {...props}
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 1567 1374" {...props}>
     <path
       fill="#FFC700"
       fillRule="evenodd"
@@ -138,12 +131,7 @@ const SvgLogo = (props: SVGProps<SVGSVGElement>) => (
       d="m333.839 177.386 43.398 31.377-2.417 62.764z"
       clipRule="evenodd"
     />
-    <path
-      stroke="currentColor"
-      strokeMiterlimit={2.613}
-      strokeWidth={4.656}
-      d="m331.432 237.724 43.388 36.211"
-    />
+    <path stroke="currentColor" strokeMiterlimit={2.613} strokeWidth={4.656} d="m331.432 237.724 43.388 36.211" />
     <path
       fill="#B49421"
       fillRule="evenodd"
@@ -155,12 +143,7 @@ const SvgLogo = (props: SVGProps<SVGSVGElement>) => (
       d="m230.174 283.591 43.398 26.554-2.408 60.347z"
       clipRule="evenodd"
     />
-    <path
-      stroke="currentColor"
-      strokeMiterlimit={2.613}
-      strokeWidth={4.656}
-      d="m222.952 341.522 48.212 31.387"
-    />
+    <path stroke="currentColor" strokeMiterlimit={2.613} strokeWidth={4.656} d="m222.952 341.522 48.212 31.387" />
     <path
       fill="#B49421"
       fillRule="evenodd"
@@ -210,12 +193,7 @@ const SvgLogo = (props: SVGProps<SVGSVGElement>) => (
       d="m1240.27 184.626-36.16 33.794 2.4 60.347z"
       clipRule="evenodd"
     />
-    <path
-      stroke="currentColor"
-      strokeMiterlimit={2.613}
-      strokeWidth={4.656}
-      d="m1206.51 281.175 38.57-31.378"
-    />
+    <path stroke="currentColor" strokeMiterlimit={2.613} strokeWidth={4.656} d="m1206.51 281.175 38.57-31.378" />
     <path
       fill="#B49421"
       fillRule="evenodd"
@@ -227,12 +205,7 @@ const SvgLogo = (props: SVGProps<SVGSVGElement>) => (
       d="m1346.34 293.248-43.4 24.137 4.82 55.524z"
       clipRule="evenodd"
     />
-    <path
-      stroke="currentColor"
-      strokeMiterlimit={2.613}
-      strokeWidth={4.656}
-      d="m1348.75 351.179-40.99 21.73"
-    />
+    <path stroke="currentColor" strokeMiterlimit={2.613} strokeWidth={4.656} d="m1348.75 351.179-40.99 21.73" />
     <path
       fill="#B49421"
       fillRule="evenodd"

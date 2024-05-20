@@ -1,4 +1,4 @@
-import Error from "@/modules/error";
+import Error from '@/modules/error';
 export default function Home({}) {
   return <Error type="404" />;
 }

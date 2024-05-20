@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "icon": "svgr icons -d components/icons --typescript --icon --replace-attr-values \"#000=currentColor=\""
+    "icon": "svgr icons -d components/icons --typescript --icon --replace-attr-values \"#000=currentColor=\"",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,html,css,scss}\""
   },
   "dependencies": {
     "classnames": "^2.5.1",

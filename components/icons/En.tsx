@@ -1,22 +1,10 @@
-import * as React from "react";
-import type { SVGProps } from "react";
+import * as React from 'react';
+import type { SVGProps } from 'react';
 const SvgEn = (props: SVGProps<SVGSVGElement>) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="1em"
-    height="1em"
-    fill="none"
-    viewBox="0 0 36 36"
-    {...props}
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 36 36" {...props}>
     <g clipPath="url(#en_svg__a)">
       <rect width={36} height={36} fill="#fff" rx={18} />
-      <path
-        fill="#1A47B8"
-        fillRule="evenodd"
-        d="M0 0h21.6v16.8H0z"
-        clipRule="evenodd"
-      />
+      <path fill="#1A47B8" fillRule="evenodd" d="M0 0h21.6v16.8H0z" clipRule="evenodd" />
       <path
         fill="#F93939"
         fillRule="evenodd"

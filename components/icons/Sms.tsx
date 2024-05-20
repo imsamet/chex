@@ -1,14 +1,7 @@
-import * as React from "react";
-import type { SVGProps } from "react";
+import * as React from 'react';
+import type { SVGProps } from 'react';
 const SvgSms = (props: SVGProps<SVGSVGElement>) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="1em"
-    height="1em"
-    fill="none"
-    viewBox="0 0 24 24"
-    {...props}
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24" {...props}>
     <path
       fill="currentColor"
       d="M17.74 3H6.26c-1.13 0-2.213.475-3.012 1.321A4.65 4.65 0 0 0 2 7.511v8.978c0 1.197.449 2.344 1.248 3.19A4.14 4.14 0 0 0 6.26 21h11.48c.56 0 1.113-.117 1.63-.343a4.3 4.3 0 0 0 1.382-.978c.396-.419.71-.916.924-1.463A4.7 4.7 0 0 0 22 16.489V7.511a4.65 4.65 0 0 0-1.248-3.19A4.14 4.14 0 0 0 17.74 3m-.26 6.247-3.29 2.954a3.27 3.27 0 0 1-2.195.857 3.27 3.27 0 0 1-2.195-.857L6.42 9.247a.837.837 0 0 1-.075-1.138.75.75 0 0 1 .522-.276c.202-.015.4.056.553.196l3.38 2.976c.342.308.776.477 1.225.477s.883-.17 1.225-.477l3.3-2.954a.733.733 0 0 1 1.06.084.85.85 0 0 1-.13 1.112"
