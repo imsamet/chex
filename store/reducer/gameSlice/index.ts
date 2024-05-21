@@ -20,6 +20,18 @@ export const gameSlice = createSlice({
   name: 'game',
   initialState,
   reducers: {
+    setReset: state => {
+      state.isLoading = false;
+      state.isLastGame = false;
+      state.level = 1;
+      state.letterSetId = null;
+      state.game = null;
+      state.selectLetter = [];
+      state.isRunning = false;
+      state.time = 60;
+      state.words = [];
+      state.scores = [];
+    },
     startTimer: state => {
       state.isRunning = true;
     },
@@ -94,6 +106,14 @@ export const gameSlice = createSlice({
   },
 });
 
-export const { stopTimer, startTimer, tick, setSelectLetter, setBackwardSelectLetter, setCheck, setDeleteWord } =
-  gameSlice.actions;
+export const {
+  setReset,
+  stopTimer,
+  startTimer,
+  tick,
+  setSelectLetter,
+  setBackwardSelectLetter,
+  setCheck,
+  setDeleteWord,
+} = gameSlice.actions;
 export default gameSlice.reducer;

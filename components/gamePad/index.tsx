@@ -3,7 +3,7 @@ import cn from 'classnames';
 import Button from '../button';
 import { GameButtonPad } from '../gameButtonPad';
 import { BugsBunny } from '../icons';
-import { setBackwardSelectLetter, setCheck, startTimer, stopTimer, tick } from '@/store/reducer/gameSlice';
+import { setBackwardSelectLetter, setCheck, setReset, startTimer, stopTimer, tick } from '@/store/reducer/gameSlice';
 import useTranslation from 'next-translate/useTranslation';
 import { useEffect } from 'react';
 import getScore from '@/store/actions/game/getScore';
@@ -48,6 +48,9 @@ export const GamePad: React.FC = () => {
   };
   const handleStart = () => {
     dispatch(startTimer());
+  };
+  const handleClickReset = () => {
+    dispatch(setReset());
   };
   return (
     <div className="flex flex-col gap-14 relative">
@@ -104,7 +107,7 @@ export const GamePad: React.FC = () => {
               </span>
             </div>
             <div className="flex justify-center">
-              <Link href="/" className="w-auto" locale={lang}>
+              <Link onClick={handleClickReset} href="/" className="w-auto" locale={lang}>
                 <Button label={t('home')} />
               </Link>
             </div>

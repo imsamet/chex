@@ -18,5 +18,6 @@
   "total-score": "Toplam Skor",
   "total-match": "Bilinen Kelime Sayısı",
   "total-nomatch": "Yanlış Bilinen Kelime Sayısı",
-  "home": "Anasayfa'ya Git"
+  "home": "Anasayfa'ya Git",
+  "word": "Kelime"
 }

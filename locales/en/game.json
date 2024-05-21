@@ -18,5 +18,6 @@
   "total-score": "Total Score",
   "total-match": "Number of Correct Words",
   "total-nomatch": "Number of Incorrect Words",
-  "home": "Go to Home"
+  "home": "Go to Home",
+  "word": "Word"
 }

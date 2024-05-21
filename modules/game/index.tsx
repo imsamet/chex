@@ -43,7 +43,7 @@ export const Game: React.FC = ({}) => {
           <Card title={t('card-title')} className="mt-8 md:mt-0">
             <div className="grid grid-cols-[1fr_1fr_1fr] gap-5 items-center p-5 pr-14">
               <span className="text-sm">{t('level')}</span>
-              <span className="text-sm">{t('card-title')}</span>
+              <span className="text-sm">{t('word')}</span>
               <span className="text-sm justify-self-end">{t('action')}</span>
             </div>
             {words?.map(i => (
