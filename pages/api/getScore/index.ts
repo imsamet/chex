@@ -1,4 +1,4 @@
-import { Lang } from '@/core/_model';
+import { Child, Lang } from '@/core/_model';
 import { getData } from '@/server/getData';
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -9,6 +9,16 @@ type BodyType = {
     id: string;
     words: string[];
   };
+};
+const randomChild = (): Child => {
+  const temp: Child[] = ['Berkesu', 'Cansu', 'Fatmasu', 'Karsu'];
+  const randomIndex = Math.floor(Math.random() * temp.length);
+  return temp[randomIndex];
+};
+const randomMessage = (): string => {
+  const temp: string[] = ['message-1', 'message-2', 'message-3', 'message-4', 'message-5'];
+  const randomIndex = Math.floor(Math.random() * temp.length);
+  return temp[randomIndex];
 };
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -25,10 +35,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const resJson = {
         level,
         stepId: step.id,
-        score: matchWords.length * 5,
+        score: matchWords.length * 5 + notMatchWords.length * -1,
         addTime: matchWords.length * 15 + notMatchWords.length * -1,
         matchWords,
         notMatchWords,
+        child: randomChild(),
+        message: randomMessage(),
       };
       res.status(200).json(resJson);
     })

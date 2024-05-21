@@ -1,6 +1,6 @@
 import useTranslation from 'next-translate/useTranslation';
 import { Icons as IconsType } from '@/components/icons/_model';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from '@/hooks/useRedux';
 import getGame from '@/store/actions/game/getGame';
 import { Lang } from '@/core/_model';
@@ -18,16 +18,20 @@ interface List {
 export const Game: React.FC = ({}) => {
   const { t, lang } = useTranslation('game') as { t: Translate; lang: Lang };
   const dispatch = useDispatch();
-  const { level, game, time, words } = useSelector(state => state.game);
+  const { scores, game, words } = useSelector(state => state.game);
+  const [isModal, setModal] = useState<boolean>(false);
   useEffect(() => {
     !game && dispatch(getGame(lang));
   }, []);
+  useEffect(() => {
+    scores.length > 0 && setModal(true);
+  }, [scores]);
   const handleClickDelete = (word: string) => {
     dispatch(setDeleteWord(word));
   };
   return (
     <header className="py-24">
-      <Modal />
+      <Modal showModal={isModal} setShowModal={setModal} />
       <div className="container">
         <div className="row grid-cols-1 md:grid-cols-2">
           <div className="flex flex-col gap-10">

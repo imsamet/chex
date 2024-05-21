@@ -8,5 +8,15 @@
   "total": "Total",
   "complete-step": "Complete Step",
   "next-step": "Next Step",
-  "add": "Add Word"
+  "add": "Add Word",
+  "next": "Next",
+  "message-1": "Wow, you really surprised us.",
+  "message-2": "Nice, nice, but I can do better.",
+  "message-3": "Is this score a joke?",
+  "message-4": "The final game score displayed on the screen... Well done!",
+  "message-5": "Maybe you should join 'Who Wants to Be a Millionaire?' I feel like we'd win that too, but it's up to you.",
+  "total-score": "Total Score",
+  "total-match": "Number of Correct Words",
+  "total-nomatch": "Number of Incorrect Words",
+  "home": "Go to Home"
 }

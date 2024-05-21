@@ -23,3 +23,5 @@ export type ScoreBody = {
     words: string[];
   };
 };
+
+export type Child = 'Berkesu' | 'Cansu' | 'Fatmasu' | 'Karsu';

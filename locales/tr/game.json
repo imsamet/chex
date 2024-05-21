@@ -8,5 +8,15 @@
   "total": "Toplam",
   "complete-step": "Adımı Tamamla",
   "next-step": "Sonraki Adım",
-  "add": "Kelime Ekle"
+  "add": "Kelime Ekle",
+  "next": "Devam Et",
+  "message-1": "Vay be şaşırttın bizi.",
+  "message-2": "Güzel güzel, ama ben daha iyi yaparım.",
+  "message-3": "Bu skor şaka mııı?",
+  "message-4": "Oyun sonu skorun ekrana yansıyan görüntüsü... Helal sana.",
+  "message-5": "Kim milyoner olmak ister'e mi katılsan?, orayı da alırız gibi geldi bana ama yine de sen bilirsin",
+  "total-score": "Toplam Skor",
+  "total-match": "Bilinen Kelime Sayısı",
+  "total-nomatch": "Yanlış Bilinen Kelime Sayısı",
+  "home": "Anasayfa'ya Git"
 }

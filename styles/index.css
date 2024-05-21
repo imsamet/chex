@@ -26,3 +26,6 @@ body,
 .shadow {
   box-shadow: 7px 7px 0 0 #000;
 }
+.shadow-sm {
+  box-shadow: 4px 4px 0 0 #000;
+}

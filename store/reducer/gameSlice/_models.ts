@@ -1,4 +1,4 @@
-import { GetGame } from '@/core/_model';
+import { Child, GetGame } from '@/core/_model';
 import { Level } from '@/db/_model';
 
 export type SelectLetter = {
@@ -12,9 +12,12 @@ export type Score = {
   addTime: number;
   matchWords: string[];
   notMatchWords: string[];
+  child: Child;
+  message: string;
 };
 export type GameState = {
   level: Level;
+  isLastGame: boolean;
   isLoading: boolean;
   letterSetId: null | string;
   selectLetter: SelectLetter[];

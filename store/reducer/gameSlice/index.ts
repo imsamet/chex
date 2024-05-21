@@ -5,6 +5,7 @@ import getScore from '@/store/actions/game/getScore';
 
 const initialState: GameState = {
   isLoading: false,
+  isLastGame: false,
   level: 1,
   letterSetId: null,
   game: null,
@@ -80,9 +81,11 @@ export const gameSlice = createSlice({
       const index = temp?.games.findIndex(i => i.id === state.letterSetId) || 0;
       if (temp && index < temp?.games.length - 1) {
         state.letterSetId = temp.games[index + 1].id;
-      } else if (state.level < 3) {
+      } else if (temp && index === temp?.games.length - 1 && state.level < 3) {
         state.letterSetId = state.game.steps.find(i => i.level === state.level + 1)?.games[0].id || null;
         state.level += 1;
+      } else {
+        state.isLastGame = true;
       }
     });
     builder.addCase(getScore.rejected, (state, action) => {
